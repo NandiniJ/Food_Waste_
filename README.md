@@ -1,8 +1,8 @@
-<h1>Unit 3 Final Project: Project Name HERE</h1>
+<h1>Unit 3 Final Project: Project Name Food Sorting Game</h1>
 
-<strong>Interaction</strong>:
+<strong>Interaction</strong>: The Food Sorting Game uses the Kinect sensor to aim and throw different types of food into the baskets, to educate players about the importance of sorting food correctly. 
 
-<strong>Description</strong>:
+<strong>Description</strong>: The Food Sorting Game addresses the largely ignored issue of food wastage in Mumbai. Sorting food into the correct food groups means more edible food being distributed to the less fortunate, and in a more efficient manner. The long-term objective of the game is to raise awareness about this growing issue, and provide a simple way in which community members can help end it.
 
 <h2>Timeline</h2>
 
@@ -10,7 +10,8 @@
   <h3>Milestone #1: April 25th, 2015 </h3>
   <strong>Goal:</strong> You should have solid planning done by the end of this milestone.
   <ul>
-    <li>first task : who is doing it (if in team)</li>
+    <li> Find images </li>
+    <li> Make explanation slides </li>
   </ul>
 </div>
 
