@@ -10,9 +10,9 @@
   <h3>Milestone #1: April 25th, 2015 </h3>
   <strong>Goal:</strong> You should have solid planning done by the end of this milestone.
   <ul>
-    <li> Find images and sort </li>
-    <li> Create background </li>
-    <li> Start collecting materials for visuals </li>
+    <li> Make a list of food items and groups </li>
+    <li> Insert background </li>
+    <li> Start collecting materials (baskets, conductive tape, food tray) for visuals </li>
     <li> Research how to add timer to game </li>
   </ul>
 </div>
@@ -21,9 +21,9 @@
   <h3>Milestone #2: May 2nd, 2015 </h3>
   <strong>Goal:</strong> You should have a small prototype by the end of this milestone.
   <ul>
-    <li> Write a rough draft of code for the game </li>
+    <li> Write a rough draft of code which displays sorting baskets and falling food </li>
     <li> Test game with at least two baskets done </li>
-    <li> Determine how to connect game to PBL topic </li>
+    <li> Design slides which explain food waste issue </li>
   </ul>
 </p>
 
@@ -32,8 +32,9 @@
   Milestone #3: May 12th, 2015 (For C block) </h3>
   <strong>Goal:</strong> You should have iterated and improved on your prototype by the end of this milestone.
   <ul>
-    <li> Makey Makey should recognise correct items and baskets </li>
+    <li> Makey Makey should recognise correct items falling in baskets </li>
     <li> Complete baskets and throwing objects </li>
-    <li> Have visuals which explain the PBL Food Waste project </li>
+    <li> Add music and timer to enhance game </li>
+    <li> Have slides (visual) which explain the PBL Food Waste project </li>
   </ul>
 </div>
