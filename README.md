@@ -1,4 +1,4 @@
-<h1>Unit 3 Final Project: Project Name Food Sorting Game</h1>
+<h1>Unit 3 Final Project: Food Sorting Game</h1>
 
 <strong>Interaction</strong>: The Food Sorting Game uses the Makey Makey to aim and throw different types of food into the right basket, to educate players about the importance of sorting food correctly. 
 
