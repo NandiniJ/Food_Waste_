@@ -22,8 +22,8 @@
   <strong>Goal:</strong> You should have a small prototype by the end of this milestone.
   <ul>
     <li> Write a rough draft of code which displays sorting baskets and falling food </li>
-    <li> Test game with at least two baskets done </li>
-    <li> Design slides which explain food waste issue </li>
+    <li> Test game with at least two controllers done </li>
+    <li> Research adding introduction slide </li>
   </ul>
 </p>
 
@@ -33,8 +33,8 @@
   <strong>Goal:</strong> You should have iterated and improved on your prototype by the end of this milestone.
   <ul>
     <li> Makey Makey should recognise correct items falling in baskets </li>
-    <li> Complete baskets and throwing objects </li>
+    <li> Complete controllers </li>
     <li> Add music and timer to enhance game </li>
-    <li> Have slides (visual) which explain the PBL Food Waste project </li>
+    <li> Have a slide which explain the PBL Food Waste project </li>
   </ul>
 </div>
