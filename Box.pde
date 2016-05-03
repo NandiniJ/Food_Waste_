@@ -20,12 +20,13 @@ class Box
     _label = "Unlabled";
   }
   
-  Box(String fileName, String label)
+  Box(String Box, String label)
   {
     _x = 0;
     _y = 0;
     
-    _image = loadImage(fileName);
+    _image = loadImage("Box.png");
+    _image.resize(230,230);
     // loads Image, doesn't draw
     _w = _image.width;
     _h = _image.height;
@@ -36,6 +37,8 @@ class Box
   {
     image(_image, _x, _y);
     //Create the label here
+fill(255,255,255);
+rect(_x+15,735,200,40);
   }
   
 }
