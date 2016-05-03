@@ -21,9 +21,9 @@
   <h3>Milestone #2: May 2nd, 2015 </h3>
   <strong>Goal:</strong> You should have a small prototype by the end of this milestone.
   <ul>
-    <li> Write a rough draft of code which displays sorting baskets and falling food </li>
-    <li> Test game with at least two controllers done </li>
     <li> Research adding introduction slide </li>
+    <li> Successfully run with at least two boxes done </li>
+    <li> Write a rough draft of code which displays sorting boxes and falling food </li>
   </ul>
 </p>
 
