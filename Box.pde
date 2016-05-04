@@ -20,7 +20,7 @@ class Box
     _label = "Unlabled";
   }
   
-  Box(String Box, String label)
+  Box(String label)
   {
     _x = 0;
     _y = 0;

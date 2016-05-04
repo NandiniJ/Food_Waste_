@@ -1,29 +1,64 @@
 PImage fwbackground;
 PImage Box;
 PImage img1;
+PImage img2;
+PImage img3;
+PImage img4;
+PImage img5;
 Box veggies;
 Box proteins;
 Box fruits;
 Box grains;
 Box desserts;
-Vegetable bakedpotato;
-Vegetable carrot;
-Vegetable salad;
-Vegetable corn;
+Vegetable Vegetable;
+Vegetable[] vegetables = new Vegetable[2];
+
+Protein Protein;
+Protein[] proteinz = new Protein[2];
+
+Grain Grain;
+Grain[] grainz = new Grain[2];
+
+Fruit Fruit;
+Fruit[] fruitz = new Fruit[2];
+
+Dessert Dessert;
+Dessert[] dessertz = new Dessert[2];
 void setup()
 {
   fullScreen();
   fwbackground=loadImage("fwbackground.jpg");
   image(fwbackground,0,-200);
-  veggies = new Box("veggies.png", "Veggies");
-  proteins = new Box("proteins.png", "Proteins");
-  fruits = new Box ("fruits.png", "Fruits");
-  grains = new Box ("grains.png", "Grains");
-  desserts = new Box ("desserts.png", "Desserts");
-  bakedpotato = new Vegetable ("bakedpotato.png");
-  carrot = new Vegetable ("carrot.png");
-  salad = new Vegetable ("salad.png");
-  corn = new Vegetable ("corn.png");
+  veggies = new Box("Veggies");
+  proteins = new Box("Proteins");
+  fruits = new Box ("Fruits");
+  grains = new Box ("Grains");
+  desserts = new Box ("Desserts");
+  
+  for(int i=0; i<2; i++)
+  {
+    vegetables[i]=new Vegetable(random(0,1000),random(0,400),200,100);
+  }
+  
+  for(int i=0; i<2; i++)
+  {
+    proteinz[i]=new Protein(random(0,1000),random(0,400),200,100);
+  }
+  
+  for(int i=0; i<2; i++)
+  {
+    grainz[i]=new Grain(random(0,1000),random(0,400),200,100);
+  }
+  
+   for(int i=0; i<2; i++)
+  {
+    fruitz[i]=new Fruit(random(0,1000),random(0,400),200,100);
+  }
+  
+  for(int i=0; i<2; i++)
+  {
+    dessertz[i]=new Dessert(random(0,1000),random(0,400),200,100);
+  }
 }
 void draw()
 {
@@ -58,19 +93,26 @@ void draw()
   text("Desserts",1072,690);
   textSize(32);
   
-  bakedpotato._x=100;
-  bakedpotato._y=100 ;
-  bakedpotato.Draw();
-
-  carrot._x=700;
-  carrot._y=700 ;
-  carrot.Draw();
+  for (int i=0; i<2; i++)
+  {
+    vegetables[i].Draw();
+  }
+  for (int i=0; i<2; i++)
+  {
+    proteinz[i].Draw();
+  }
+  for (int i=0; i<2; i++)
+  {
+    grainz[i].Draw();
+  }
   
-  salad._x=300;
-  salad._y=300 ;
-  salad.Draw();
+  for (int i=0; i<2; i++)
+  {
+    fruitz[i].Draw();
+  }
   
-  corn._x=400;
-  corn._y=400 ;
-  corn.Draw();
+  for (int i=0; i<2; i++)
+  {
+    dessertz[i].Draw();
+  }
 }
