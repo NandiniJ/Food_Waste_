@@ -27,22 +27,22 @@ class Dessert
     int iNum = (int)random(1,4);
     if (iNum==1)
    {
-    img5 = loadImage("banana.png");
+    img5 = loadImage("cake.png");
     img5.resize(500,500);
    }
    if (iNum==2)
    {
-    img5 = loadImage("apple.png");
+    img5 = loadImage("cupcake.png");
     img5.resize(500,500);
    }
    if (iNum==3)
    {
-    img5 = loadImage("mango.png");
+    img5 = loadImage("brownie.png");
     img5.resize(500,500);
    }
    if (iNum==4)
    {
-    img5 = loadImage("strawberry.png");
+    img5 = loadImage("cookies.png");
     img5.resize(500,500);
    }
   }
