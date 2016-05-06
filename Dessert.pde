@@ -5,6 +5,7 @@ class Dessert
   float y;
   float w;
   float h;
+  float xspeed;
   PImage img5;
   int iNum; 
   
@@ -15,6 +16,7 @@ class Dessert
     y = 0;
     w = 0;
     h = 0;
+    xspeed=1;
    iNum = (int) random(1,4);
   }
   
@@ -50,6 +52,15 @@ class Dessert
   void Draw()
   {
    image(img5,x,y,w,h);
+  }
+  
+  void Move ()
+  {
+    x= x + xspeed;
+    if (x>width)
+    {
+      x=0;
+    }
   }
   
 }
