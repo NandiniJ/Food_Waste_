@@ -52,4 +52,9 @@ class Protein
    image(img2,x,y,w,h);
   }
   
+   void Move ()
+  {
+    x+=10;
+  }
+  
 }

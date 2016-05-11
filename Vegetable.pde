@@ -51,4 +51,9 @@ class Vegetable
   {
    image(img1,x,y,w,h);
   }
+  
+   void Move ()
+  {
+    x+=10;
+  }
 }

@@ -8,7 +8,8 @@ class Dessert
   float xspeed;
   PImage img5;
   int iNum; 
-  
+  int itemPosX;
+  int itemPosY;
   Dessert()
   // Constructor 
   {
@@ -16,7 +17,6 @@ class Dessert
     y = 0;
     w = 0;
     h = 0;
-    xspeed=1;
    iNum = (int) random(1,4);
   }
   
@@ -56,11 +56,16 @@ class Dessert
   
   void Move ()
   {
-    x= x + xspeed;
-    if (x>width)
-    {
-      x=0;
-    }
+    x+=10;
   }
   
+    void keyPressed()
+  {
+    if (x>width)
+    if (keyCode==UP)
+    {
+    redraw();
+    image(img5,0,0,w,h);
+    }
+  }
 }

@@ -52,4 +52,9 @@ class Fruit
    image(img4,x,y,w,h);
   }
   
+   void Move ()
+  {
+    x+=10;
+  }
+  
 }

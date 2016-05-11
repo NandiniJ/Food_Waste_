@@ -52,4 +52,8 @@ class Grain
    image(img3,x,y,w,h);
   }
   
+   void Move ()
+  {
+    x+=10;
+  }
 }
