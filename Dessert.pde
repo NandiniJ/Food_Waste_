@@ -59,7 +59,7 @@ class Dessert
     x+=10;
   }
   
-    void keyPressed()
+    void redraw()
   {
     if (x>width)
     if (keyCode==UP)
