@@ -6,6 +6,7 @@ class Protein
   float w;
   float h;
   PImage img2;
+  boolean visible;
   int iNum; 
   
   Protein()
@@ -15,6 +16,7 @@ class Protein
     y = 0;
     w = 0;
     h = 0;
+    visible = true;
    iNum = (int) random(1,4);
   }
   
@@ -24,6 +26,7 @@ class Protein
     y = _y;
     w = _w;
     h = _h;
+    visible = true;
     int iNum = (int)random(1,4);
     if (iNum==1)
    {
@@ -49,7 +52,10 @@ class Protein
   
   void Draw()
   {
+    if (visible==true)
+   {
    image(img2,x,y,w,h);
+   }
   }
   
    void Move ()

@@ -46,7 +46,7 @@ Dessert[] dessertz = new Dessert[2];
 void setup()
 {
   fullScreen(); 
- file = new SoundFile(this, "Can.mp3");
+  file = new SoundFile(this, "Can.mp3");
   file.loop();
   stage =1; 
   screenSizeX = (width);
@@ -54,6 +54,7 @@ void setup()
   startscreen=loadImage("Home.jpg");
   image(startscreen, 0, 0, screenSizeX, screenSizeY);
   title= createFont ("font", 20, true);
+  fwbackground=loadImage("fwbackground.jpg");
   textFont(title);
   if (stage==1)
   {
@@ -64,109 +65,112 @@ void setup()
     String a = "A child dies from hunger every 10 seconds.";
     text(a, 30, 30, 200, 200);
     textSize(35);
-    fill(0,252,109);
+    fill(0, 252, 109);
     String b = "All facts from www.robinhoodarmy.com contact for donation information";
     text(b, 1, 750, 1300, 200);
     textSize(25); 
-    fill(255,255,255);
+    fill(255, 255, 255);
     String c = "One in every eight people sleeps hungry each night";
     text(c, 480, 40, 300, 200);
     textSize(50);
-    fill(0,252,109);
+    fill(0, 252, 109);
     String d = "DONATE EDIBLE LEFTOVER FOOD";
-    text(d, 300,210, 700, 200);
+    text(d, 300, 210, 700, 200);
     textSize(25);
-    fill(255,255,255);
+    fill(255, 255, 255);
     String e = "One third of the food produced around the world is never consumed";
-    text(e,930,40,300,200);
+    text(e, 930, 40, 300, 200);
+  }
+  for (int i=0; i<2; i++)
+  {
+    vegetables[i]=new Vegetable(numFood * -200, random(0, height-400), 200, 100);
+    numFood++;
+  }
+
+  for (int i=0; i<2; i++)
+  {
+    proteinz[i]=new Protein(numFood * -200, random(0, height-200), 200, 100);
+    numFood++;
+  }
+
+  for (int i=0; i<2; i++)
+  {
+    grainz[i]=new Grain(numFood * -200, random(0, height-400), 200, 100);
+    numFood++;
+  }
+
+  for (int i=0; i<2; i++)
+  {
+    fruitz[i]=new Fruit(numFood * -200, random(0, height-400), 200, 100);
+    numFood++;
+  }
+
+  for (int i=0; i<2; i++)
+  {
+    dessertz[i]=new Dessert(numFood * -200, random(0, height-400), 200, 100);
+    numFood++;
+    //dessertz[i]=new Dessert(x+xspeed,random(0,400),200,100);
   }
 }
 void draw()
 {
-   if (keyPressed==true)
-   {
-   stage = 2;
-   }
+  if (keyPressed==true)
+  {
+    stage = 2;
+  }
   if (stage==2)
   {
-    fwbackground=loadImage("fwbackground.jpg");
+
     veggies = new Box("Veggies");
     proteins = new Box("Proteins");
     fruits = new Box ("Fruits");
     grains = new Box ("Grains");
     desserts = new Box ("Desserts");
-    for (int i=0; i<2; i++)
-    {
-      vegetables[i]=new Vegetable(numFood * -200, random(0, height-400), 200, 100);
-      numFood++;
-    }
 
-    for (int i=0; i<2; i++)
-    {
-      proteinz[i]=new Protein(numFood * -200, random(0, height-200), 200, 100);
-      numFood++;
-    }
-
-    for (int i=0; i<2; i++)
-    {
-      grainz[i]=new Grain(numFood * -200, random(0, height-400), 200, 100);
-      numFood++;
-    }
-
-    for (int i=0; i<2; i++)
-    {
-      fruitz[i]=new Fruit(numFood * -200, random(0, height-400), 200, 100);
-      numFood++;
-    }
-
-    for (int i=0; i<2; i++)
-    {
-      dessertz[i]=new Dessert(numFood * -200, random(0, height-400), 200, 100);
-      numFood++;
-      //dessertz[i]=new Dessert(x+xspeed,random(0,400),200,100);
-    }
     image(fwbackground, 0, -200);
 
     veggies._x=25;
     veggies._y=560;
     veggies.Draw();
-    fill(0,0,0);
+    fill(0, 0, 0);
     textSize(32);
-    text("Veggies",140, 765);
-   
+    text("Veggies", 140, 765);
+
     proteins._x=275;
     proteins._y=560;  
     proteins.Draw();
-    fill(0,0,0);
+    fill(0, 0, 0);
     textSize(32);
     text("Proteins", 390, 765);
 
     fruits._x=525;
     fruits._y=560;  
     fruits.Draw();
-    fill(0,0,0);
+    fill(0, 0, 0);
     textSize(32);
     text("Fruits", 640, 765);
 
     grains._x=775;
     grains._y=560;  
     grains.Draw();
-    fill(0,0,0);
+    fill(0, 0, 0);
     textSize(32);
     text("Grains", 890, 765);
-    
+
     desserts._x=1025;
     desserts._y=560;  
     desserts.Draw();
-    fill(0,0,0);
+    fill(0, 0, 0);
     textSize(32);
     text("Desserts", 1141, 765);
-    
+
 
     for (int i=0; i<2; i++)
     {
       vegetables[i].Move();
       vegetables[i].Draw();
+      print("X: ");
+      println(vegetables[i].x);
     }
     for (int i=0; i<2; i++)
     {
@@ -189,9 +193,63 @@ void draw()
     {
       dessertz[i].Move();
       dessertz[i].Draw();
-      redraw();
+      //redraw();
     }
     DrawTimer();
+  }
+  if (keyPressed)
+  {
+   if (keyCode==UP);
+   {
+     for (int i=0; i<2; i++)
+     {
+
+       if (vegetables[i].x>0)
+       {
+         vegetables[i].visible = false;
+       }
+     }
+   }
+   if (keyCode==DOWN);
+   { 
+     for (int i=0; i<2; i++)
+     {
+       if (proteinz[i].x>0)
+       { 
+         proteinz[i].visible = false;
+       }
+     }
+   }
+   if (keyCode==LEFT);
+   { 
+     for (int i=0; i<2; i++)
+     {
+       if (grainz[i].x>0)
+       { 
+         grainz[i].visible = false;
+       }
+     }
+   }
+   if (keyCode==RIGHT);
+   { 
+     for (int i=0; i<2; i++)
+     {
+       if (fruitz[i].x>0)
+       { 
+         fruitz[i].visible = false;
+       }
+     }
+   }
+    if (key==' ');
+   { 
+     for (int i=0; i<2; i++)
+     {
+       if (dessertz[i].x>0)
+       { 
+         dessertz[i].visible = false;
+       }
+     }
+   }
   }
 }
 

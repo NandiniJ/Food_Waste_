@@ -6,6 +6,7 @@ class Fruit
   float w;
   float h;
   PImage img4;
+  boolean visible;
   int iNum; 
   
   Fruit()
@@ -15,6 +16,7 @@ class Fruit
     y = 0;
     w = 0;
     h = 0;
+    visible = true;
    iNum = (int) random(1,4);
   }
   
@@ -24,6 +26,7 @@ class Fruit
     y = _y;
     w = _w;
     h = _h;
+    visible = true;
     int iNum = (int)random(1,4);
     if (iNum==1)
    {
@@ -49,7 +52,10 @@ class Fruit
   
   void Draw()
   {
+   if (visible == true)
+    {
    image(img4,x,y,w,h);
+    }
   }
   
    void Move ()
